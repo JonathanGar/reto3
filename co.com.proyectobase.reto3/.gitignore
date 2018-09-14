@@ -1,0 +1,5 @@
+/.gradle/
+debug.log
+target/site/serenity/
+
+/build/
