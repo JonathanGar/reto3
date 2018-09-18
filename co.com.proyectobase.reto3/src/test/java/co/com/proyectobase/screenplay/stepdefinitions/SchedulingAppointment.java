@@ -8,7 +8,9 @@ import java.util.List;
 import org.openqa.selenium.WebDriver;
 
 import co.com.proyectobase.screenplay.model.AddPatientHospitalsManagementModel;
+import co.com.proyectobase.screenplay.model.ScheduleAppointmentModel;
 import co.com.proyectobase.screenplay.questions.TheMessageOnAddPatient;
+import co.com.proyectobase.screenplay.questions.TheMessageOnScheduleAppointment;
 import co.com.proyectobase.screenplay.tasks.OpenBrowser;
 import co.com.proyectobase.screenplay.tasks.appointments.Schedule;
 import co.com.proyectobase.screenplay.tasks.patients.Register;
@@ -38,12 +40,13 @@ public class SchedulingAppointment {
 	
 	
 	@When("^he  performs the scheduling of an appointment$")
-	public void hePerformsTheSchedulingOfAnAppointment() {
-		carlos.attemptsTo(Schedule.anAppointment());
+	public void hePerformsTheSchedulingOfAnAppointment(List<ScheduleAppointmentModel> scheduleAppointmentModel) {
+		carlos.attemptsTo(Schedule.anAppointment(scheduleAppointmentModel));
 	}
 	
 	@Then("^he verifies on the screen the message (.*)$")
-	public void heVerifiesOnTheScreenTheMessageDatosGuardadosCorrectamente() {
+	public void heVerifiesOnTheScreenTheMessageDatosGuardadosCorrectamente(String question) {
+		carlos.should(seeThat(TheMessageOnScheduleAppointment.is(), equalTo(question)));
 	}
 	
 	

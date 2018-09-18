@@ -2,17 +2,10 @@ package co.com.proyectobase.screenplay.model;
 
 public class ScheduleAppointmentModel {
 	
-	private String appointment_day;
 	private String patients_identity_document;
 	private String doctors_identity_document;
 	private String comments;
 	
-	public String getAppointment_day() {
-		return appointment_day;
-	}
-	public void setAppointment_day(String appointment_day) {
-		this.appointment_day = appointment_day;
-	}
 	public String getPatients_identity_document() {
 		return patients_identity_document;
 	}

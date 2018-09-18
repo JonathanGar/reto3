@@ -12,6 +12,8 @@ public class HospitalsManagementSite extends PageObject {
 			"The add doctor link").located(By.xpath("//*[@id=\"page-wrapper\"]/div/div[2]/div/div/div/div/div[1]/div/a[1]"));
 	public static final Target LINK_ADD_PATIENT = Target.the(
 			"The add patient link").located(By.xpath("//*[@id=\"page-wrapper\"]/div/div[2]/div/div/div/div/div[1]/div/a[2]"));
+	public static final Target LINK_SCHEDULE_APPOINTMENT = Target.the(
+			"Schedule appointment link").located(By.xpath("//*[@id=\"page-wrapper\"]/div/div[2]/div/div/div/div/div[1]/div/a[6]"));
 	
 	
 }

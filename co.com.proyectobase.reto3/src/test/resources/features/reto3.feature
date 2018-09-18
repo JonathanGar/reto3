@@ -13,7 +13,7 @@ Feature: Manage medical appointment
     Given Carlos needs registrate a new doctor
     When he performs the register of the same on the hospitals administration application
     | full_name | last_name       | phone_number | document_type        | document   |
-    | Jonathan  | García Escudero	| 3148738997   | Pasaportes           | 1036609979 |
+    | Jonathan  | García Escudero	| 3148738997   | Pasaportes           | 1036609980 |
     Then he verifies that its shown on the screen the message Datos guardados correctamente.
   
   @tag2
@@ -21,14 +21,13 @@ Feature: Manage medical appointment
   	Given Carlos needs registrate a new patient
   	When he perfomrs the registration of the same on the hospitals administration application
   	| full_name | last_name       | phone_number | document_type        | document   |
-    | Jonathan  | García Escudero	| 3148738997   | Pasaportes           | 1036609978 |
+    | Jonathan  | García Escudero	| 3148738997   | Pasaportes           | 1036609979 |
   	Then he verifies that its shown on the screen th message Datos guardados correctamente.
  
  	@tag3
  	Scenario: Perform the scheduling of an appointment
  		Given Carlos needs attend to he doctor
- 		When he  performs the scheduling of an appointment
- 		| appointment_day | patients_identity_document | doctors_identity_document | comments    |
- 		| 08/01/2018      | 11111									 	   | 22222                     | cita médica |
+ 		When he  performs the scheduling of an appointment 		 		
+ 		| patients_identity_document | doctors_identity_document | comments    				 |
+ 		| 1036609979						 	   | 1036609980                | cita médica general |
  		Then he verifies on the screen the message Datos guardados correctamente. 
- 
